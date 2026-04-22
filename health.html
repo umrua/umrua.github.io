@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+
+        <title>Umar | Health Project</title>
+
+        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootsnav.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+
+    <body>
+        <header class="top-area">
+            <div class="header-area">
+                <nav class="navbar navbar-default bootsnav dark no-background">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="index.html">umar</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li class="smooth-menu"><a href="index.html#about">about</a></li>
+                                <li class="smooth-menu"><a href="index.html#education">education</a></li>
+                                <li class="smooth-menu"><a href="index.html#skills">skills</a></li>
+                                <li class="smooth-menu"><a href="index.html#portfolio">portfolio</a></li>
+                                <li class="smooth-menu"><a href="index.html#profiles">profile</a></li>
+                                <li class="smooth-menu"><a href="index.html#contact">contact</a></li>
+                                <li class="theme-toggle-item">
+                                    <span class="theme-mode-icon theme-mode-icon-light" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <circle cx="12" cy="12" r="4"></circle>
+                                            <path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path>
+                                        </svg>
+                                    </span>
+                                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                                        <span class="theme-toggle-track" aria-hidden="true">
+                                            <span class="theme-toggle-thumb"></span>
+                                        </span>
+                                    </button>
+                                    <span class="theme-mode-icon theme-mode-icon-dark" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <path d="M20.2 14.3a8.5 8.5 0 0 1-10.5-10.5 8.5 8.5 0 1 0 10.5 10.5z"></path>
+                                        </svg>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+
+        <section class="project-detail">
+            <div class="container">
+                <div class="project-header text-center">
+                    <h1>Doctor Appointment Website and Database</h1>
+                    <p>A website made to manage patients, appointments, and the check-in process. Project was worked on at Michigan State University in the MI401 Health Information Technology and Informatics course.</p>
+                    <div class="project-links">
+                        <a href="https://umar.softr.app" target="_blank">Softr Website</a>
+                        <a href="https://airtable.com/appv9xqh8gZlQ3m3Q/shrSoiARibCJNPZv1" target="_blank">Airtable Database</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <img src="assets/images/health/home.jpg" alt="Health website home page" class="project-image">
+                    <p>The website is built using Softr, a no-code platform that allows users to create web applications using pre-built components and templates. The website is connected to an Airtable database, which stores all the data related to patients, providers, appointment slots, appointments, and check-ins.</p>
+                    <h2>Website Functionality</h2>
+                    <img src="assets/images/health/appointment.jpg" alt="Appointment booking flow" class="project-image">
+                    <p>Unsigned in users can view the staff directory without registration. They are required to sign up and log in to access appointment booking. Once logged in, they may select from a large list of times and dates, leading them to a confirmation page. Once confirmed, an appointment will be created in the database. Upon arrival to their appointment, a staff member will confirm check-in, and providers can confirm vitals collection.</p>
+                    <h2>Entity Relationship Diagram</h2>
+                    <img src="assets/images/health/ERD.jpg" alt="Health database ERD" class="project-image">
+                    <p>To break down the Entity Relationship Diagram, I have five important tables: Patient, Provider, Appointment_Slot, Appointment, and Checkin. The Patient table has a primary key called Full Name (it is the User account name in Softr). The Provider table has a primary key called Provider ID. The Appointment_Slot table has a primary key called Slot ID, and Provider ID as the foreign key. The Appointment table has a primary key called Appointment ID, and the foreign keys Slot ID and Patient ID. The Checkin table has a primary key called Check-in ID, and Appointment ID as the foreign key.</p>
+                    <p>Many care providers are in the Provider table, and those multiple providers can be assigned multiple appointment slots each, however, only one provider binds to a slot. The Appointment_Slot table consists of these many assigned slots, but one slot can only translate into one appointment in the Appointment table. The Patient table is filled with many patients, but only one patient can book one appointment using one slot at a time, however, they can choose to book many appointments later on. The Checkin table is only populated with one linked record when one appointment in the Appointment table is hand confirmed. This confirmation is dependent on the patient arrival first, but they may not arrive.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer-copyright" class="footer-copyright">
+            <div class="container">
+                <div class="hm-footer-copyright text-center">
+                    <p>
+                        &copy; copyright Muhammad Umar. design and developed by <a href="https://www.themesine.com/">themesine</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="scroll-Top">
+                <div class="return-to-top">
+                    <i class="fa fa-angle-up " id="scroll-top" ></i>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+        <script src="assets/js/jquery.sticky.js"></script>
+        <script src="assets/js/progressbar.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+
+</html>

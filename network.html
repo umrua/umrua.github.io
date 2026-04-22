@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+
+        <title>Umar | Network Project</title>
+
+        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootsnav.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+
+    <body>
+        <header class="top-area">
+            <div class="header-area">
+                <nav class="navbar navbar-default bootsnav dark no-background">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="index.html">umar</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li class="smooth-menu"><a href="index.html#about">about</a></li>
+                                <li class="smooth-menu"><a href="index.html#education">education</a></li>
+                                <li class="smooth-menu"><a href="index.html#skills">skills</a></li>
+                                <li class="smooth-menu"><a href="index.html#portfolio">portfolio</a></li>
+                                <li class="smooth-menu"><a href="index.html#profiles">profile</a></li>
+                                <li class="smooth-menu"><a href="index.html#contact">contact</a></li>
+                                <li class="theme-toggle-item">
+                                    <span class="theme-mode-icon theme-mode-icon-light" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <circle cx="12" cy="12" r="4"></circle>
+                                            <path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path>
+                                        </svg>
+                                    </span>
+                                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                                        <span class="theme-toggle-track" aria-hidden="true">
+                                            <span class="theme-toggle-thumb"></span>
+                                        </span>
+                                    </button>
+                                    <span class="theme-mode-icon theme-mode-icon-dark" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <path d="M20.2 14.3a8.5 8.5 0 0 1-10.5-10.5 8.5 8.5 0 1 0 10.5 10.5z"></path>
+                                        </svg>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+
+        <section class="project-detail">
+            <div class="container">
+                <div class="project-header text-center">
+                    <h1>IT Networking Hardware Project</h1>
+                    <p>Solving the issue of poor internet in a home built before the age of high-speed ethernet's popularity.</p>
+                </div>
+                <div class="project-content">
+                    <img src="assets/images/network/moca.jpg" alt="MoCA networking setup" class="project-image">
+                    <p>The problem: fiber internet installed on a floor different to where the devices are located. Running a long ethernet cable openly throughout the house, running wire through the walls, upgrading internet to an even higher speed each have their own respective hurdles, especially in an old house with outdated landline and coaxial outlets.</p>
+                    <p>The technology known as MoCA (Multimedia over Coax Alliance) solves this issue of old outlets. Fiber internet can be ran through old coaxial cables, allowing for a stable connection without the need for new wiring.</p>
+                    <p>Though I expected this little home networking project to be a quick and cheap fix, it ended up being a bit complicated. You need at least two adapters that can attain the speed you pay for, and if you have devices still using coaxial wiring, the adapters will not work unless they run on a certain frequency.</p>
+                    <p>To set this up, the fiber ONT needs to plug into the router, and the router needs to plug into the MoCA adapter ethernet port. The adapter then needs to plug into the coaxial outlet, and the outlet needs to connect into a splitter that is compatible with MoCA technology. Coaxial wiring from other rooms need to connect to the splitter, and more adapters are needed for more outlets. The second adapter needs to plug into the coaxial outlet where the second router will go, and that router then gets plugged into the adapter. Devices then can wire to that router to achieve maximum fiber speeds, all through old coaxial wiring.</p>
+                    <img src="assets/images/network/moca2.jpg" alt="MoCA adapter and splitter" class="project-image">
+                    <p>This hardware installation was particularly important for beginning my selfhosting homelab project, because it is ideal for servers to be connected via wired connections, as virtualization using wireless can have hiccups and latency issues.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer-copyright" class="footer-copyright">
+            <div class="container">
+                <div class="hm-footer-copyright text-center">
+                    <p>
+                        &copy; copyright Muhammad Umar. design and developed by <a href="https://www.themesine.com/">themesine</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="scroll-Top">
+                <div class="return-to-top">
+                    <i class="fa fa-angle-up " id="scroll-top" ></i>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+        <script src="assets/js/jquery.sticky.js"></script>
+        <script src="assets/js/progressbar.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+
+</html>

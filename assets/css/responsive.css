@@ -9,7 +9,7 @@
 @media screen and (max-width:1199px){
 	nav.navbar.bootsnav ul.nav > li > a { padding: 35px 8px;}
 	
-	.welcome-hero {height: 768px;}
+	.welcome-hero {height: 680px;}
 
 	.timeline-content span>i, .experience-time span>i {left: -15.5%;}
 }/*max-width:1199px*/
@@ -30,6 +30,7 @@
 	nav.navbar.bootsnav .navbar-toggle {display: inline-block; float: right;margin-right: 0;margin-top: 21px;}
 	nav.navbar.bootsnav .navbar-brand {float: left!important;}
 	nav.navbar.bootsnav ul.nav > li > a {padding: 15px 0px;border: transparent;}
+	nav.navbar.bootsnav ul.nav > li.theme-toggle-item {padding: 12px 0 0;justify-content: flex-start;}
 }/*max-width:992px*/
 
 @media screen and (max-width:991px){
@@ -51,6 +52,9 @@
 	.single-about-img {max-width: 450px;}
 	.experience-time span>i,.timeline-content span>i,.main-timeline:before {display: none;}
 	.experience-time, .timeline-content {margin-left: 0;}
+	.welcome-hero {height: 620px;}
+	.skills-grid {grid-template-columns: repeat(auto-fit, minmax(220px, 220px));}
+	.portfolio-grid {grid-template-columns: 1fr;}
 
 	.isotope .item {max-width: 350px;margin: 0 auto 30px;}
 
@@ -79,7 +83,12 @@
 }/*max-width:540px*/
 
 @media screen and (max-width: 480px){
-	
+	.skills-grid {grid-template-columns: repeat(1, minmax(0, 220px));}
+	.theme-mode-icon {width: 16px;height: 16px;}
+	.theme-mode-icon svg {width: 16px;height: 16px;}
+	.skill-tile {min-height: 176px;}
+	.skill-icon-wrap {width: 80px;height: 80px;}
+	.skill-logo-image {width: 46px;height: 46px;}
 }/*max-width:480px*/
 
 @media screen and (max-width: 440px){
