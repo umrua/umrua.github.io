@@ -38,9 +38,11 @@ $(document).ready(function(){
 	
 	// 2. Smooth Scroll spy
 		
-		$('.header-area').sticky({
-           topSpacing:0
-        });
+		if ($.fn.sticky) {
+			$('.header-area').sticky({
+		          topSpacing:0
+		       });
+		}
 		
 		//=============
 
@@ -61,20 +63,24 @@ $(document).ready(function(){
 			}, 1200,'easeInOutExpo');
 		});
 		
-		$('body').scrollspy({
-			target:'.navbar-collapse',
-			offset:0
-		});
+		if ($.fn.scrollspy) {
+			$('body').scrollspy({
+				target:'.navbar-collapse',
+				offset:0
+			});
+		}
 
 	// 3. Progress-bar
 	
 		var dataToggleTooTip = $('[data-toggle="tooltip"]');
 		var progressBar = $(".progress-bar");
-		if (progressBar.length) {
+		if (progressBar.length && $.fn.appear) {
 			progressBar.appear(function () {
-				dataToggleTooTip.tooltip({
-					trigger: 'manual'
-				}).tooltip('show');
+				if ($.fn.tooltip) {
+					dataToggleTooTip.tooltip({
+						trigger: 'manual'
+					}).tooltip('show');
+				}
 				progressBar.each(function () {
 					var each_bar_width = $(this).attr('aria-valuenow');
 					$(this).width(each_bar_width + '%');
@@ -86,7 +92,7 @@ $(document).ready(function(){
 	
 		// i. client (carousel)
 		var clientCarousel = $('#client');
-		if (clientCarousel.length) {
+		if (clientCarousel.length && $.fn.owlCarousel) {
 			clientCarousel.owlCarousel({
 				items:7,
 				loop:true,
@@ -306,12 +312,12 @@ $(document).ready(function(){
 
     // 7. welcome animation support
 
-        $(window).load(function(){
+		$(window).on('load', function(){
         	$(".header-text h2,.header-text p").removeClass("animated fadeInUp").css({'opacity':'0'});
             $(".header-text a").removeClass("animated fadeInDown").css({'opacity':'0'});
         });
 
-        $(window).load(function(){
+		$(window).on('load', function(){
         	$(".header-text h2,.header-text p").addClass("animated fadeInUp").css({'opacity':'0'});
             $(".header-text a").addClass("animated fadeInDown").css({'opacity':'0'});
         });
